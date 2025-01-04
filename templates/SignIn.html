@@ -2,12 +2,12 @@
 
 {%block head%}
 <link rel= "stylesheet" href="{{url_for('static', filename='SignIn.css')}}">
-<title>SignIn-EAN</title>
+<title>SignIn - EAN</title>
 {%endblock%}
 
 {%block content%}
 
-<div>
+<!-- <div>
     <div>
         <h1>Sign In</h1>
     </div>
@@ -31,13 +31,33 @@
             </div>
 
             </div>
-                <button type="submit" class="SignIpButton">SignIn</button>
+                <button type="submit" class="SignInButton">Sign In</button>
             </div>
     
             <div class="SignIn">
                 <p>Don't have an account? <a href="{{url_for('SignUp')}}">SignUp</a>.</p>
             </div>
         </form>
+    </div>
+</div> -->
+
+<div class="form-container">
+    <h1>Sign In</h1>
+    <form action="" method="POST" id="signInForm">
+        <div>
+            <label for="Email"><b>Email</b></label>
+            <input type="email" id="Email" name="Email" placeholder="Enter Email" required aria-label="Email">
+        </div>
+
+        <div>
+            <label for="Password"><b>Password</b></label>
+            <input type="password" id="Password" name="Password" placeholder="Enter Password" required aria-label="Password">
+        </div>
+
+        <button type="submit" class="SignInButton">Sign In</button>
+    </form>
+    <div class="container signup">
+        <p>Don't have an account? <a href="{{url_for('SignUp')}}">Sign Up</a>.</p>
     </div>
 </div>
 

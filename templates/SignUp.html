@@ -1,49 +1,59 @@
 {%extends "base.html" %}
 
+
 {%block head%}
 <link rel= "stylesheet" href="{{url_for('static', filename='SignUp.css')}}">
-<title>SignUp-EAN</title>
+<title>SignUp - EAN</title>
 {%endblock%}
+
 
 {%block content%}
 
-<div>
-    <div>
-        <h1>Sign Up</h1>
-    </div>
+<div class="form-container">
+    <h1>Sign Up</h1>
+    <form action="" method="POST" id="signUpForm">
+        <div>
+            <label for="Name"><b>Name</b></label>
+            <input type="text" id="Name" name="Name" placeholder="Enter Name" required aria-label="Name">
+        </div>
 
-    <div>
-        <form action="">
+        <div>
+            <label for="Email"><b>Email</b></label>
+            <input type="email" id="Email" name="Email" placeholder="Enter Email" required aria-label="Email">
+        </div>
 
-            <div>
-                <label for="Name"><b>Name</b></label>
-                <input type="text" id="Name" name="Name" placeholder="Enter Name" required>
-            </div>
+        <div>
+            <label for="Password"><b>Password</b></label>
+            <input type="password" id="Password" name="Password" placeholder="Enter Password" required aria-label="Password">
+        </div>
 
-            <div>
-                <label for="Email"><b>Email</b></label>
-                <input type="text" id="Email" name="Email" placeholder="Enter Email" required>
-            </div>
-    
-            <div>
-                <label for="Password"><b>Password</b></label>
-                <input type="password" id="Password" name="Password" placeholder="Enter Password" required>
-            </div>
-    
-            <div>
-                <label for="RepeatPassword"><b>Repeat Password</b></label>
-                <input type="password" id="RepeatPassword" name="RepeatPassword" placeholder="Repeat Password" required>
-            </div>
+        <div>
+            <label for="RepeatPassword"><b>Repeat Password</b></label>
+            <input type="password" id="RepeatPassword" name="RepeatPassword" placeholder="Repeat Password" required aria-label="Repeat Password">
+        </div>
 
-            </div>
-                <button type="submit" class="SignUpButton">SignUp</button>
-            </div>
-    
-            <div class="container signin">
-                <p>Already have an account? <a href="{{url_for('SignIn')}}">Sign In</a>.</p>
-            </div>
-        </form>
+        <div id="errorMessage">Passwords do not match!</div>
+
+        <button type="submit" class="SignUpButton">Sign Up</button>
+    </form>
+    <div class="container signin">
+        <p>Already have an account? <a href="{{url_for('SignIn')}}">Sign In</a>.</p>
     </div>
 </div>
+
+<script>
+    document.getElementById('signUpForm').addEventListener('submit', function(event) {
+        const password = document.getElementById('Password').value;
+        const repeatPassword = document.getElementById('RepeatPassword').value;
+        const errorMessage = document.getElementById('errorMessage');
+
+        if (password !== repeatPassword) {
+            event.preventDefault();
+            errorMessage.style.display = 'block';
+        } else {
+            errorMessage.style.display = 'none';
+        }
+    });
+</script>
 
 {%endblock%}

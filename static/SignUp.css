@@ -1,5 +1,94 @@
-*{
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px 25px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #00FF96;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 90%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #2b2b2b;
+    color: #eaeaea;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #00FF96;
+    background-color: #333;
+}
+
+/* Button Styling */
+.SignUpButton {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #00FF96;
+    color: #1c1c1c;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.SignUpButton:hover {
+    background-color: #00d884;
+    transform: translateY(-2px);
+}
+
+/* Sign-In Link */
+.container.signin {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container.signin a {
+    color: #00FFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.container.signin a:hover {
+    color: #00FF96;
+}
+
+/* Error Message */
+#errorMessage {
+    text-align: center;
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+    display: none;
 }
