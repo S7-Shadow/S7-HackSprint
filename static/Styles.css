@@ -5,7 +5,7 @@
 }
 
 body{
-    background: linear-gradient(90deg, #1a1a1a, #333);
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
 }
 
 .Container{
@@ -34,7 +34,7 @@ body{
 }
 
 .Button{
-    background-color: #141615; /* Green */
+    background-color: #00FF96;
     text-align: center;
     border: none;
     margin: 4px 10px;
@@ -45,7 +45,7 @@ body{
 }
 
 .Button:hover{
-    background: #9b6565;
+    background: #00d884;
     color: #1a1a1a;
 }
 
@@ -53,7 +53,7 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    color: #17e987;
+    color: #1c1c1c;
     text-decoration: none;
 }
 
