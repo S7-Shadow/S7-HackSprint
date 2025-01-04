@@ -1,4 +1,67 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, #1a1a1a, #333);
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+#Title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4rem;
+    color: #17e987;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#Tagline{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    color: #17e987;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.Button{
+    background-color: #141615; /* Green */
+    text-align: center;
+    border: none;
+    margin: 4px 10px;
+    padding: 1rem 2rem;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.Button:hover{
+    background: #9b6565;
+    color: #1a1a1a;
+}
+
+.Link{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #17e987;
+    text-decoration: none;
+}
+
+.Footer{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    color: #17e987;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
 }
