@@ -7,4 +7,43 @@
 
 {%block content%}
 
+<div>
+    <div>
+        <h1>Sign Up</h1>
+    </div>
+
+    <div>
+        <form action="">
+
+            <div>
+                <label for="Name"><b>Name</b></label>
+                <input type="text" id="Name" name="Name" placeholder="Enter Name" required>
+            </div>
+
+            <div>
+                <label for="Email"><b>Email</b></label>
+                <input type="text" id="Email" name="Email" placeholder="Enter Email" required>
+            </div>
+    
+            <div>
+                <label for="Password"><b>Password</b></label>
+                <input type="password" id="Password" name="Password" placeholder="Enter Password" required>
+            </div>
+    
+            <div>
+                <label for="RepeatPassword"><b>Repeat Password</b></label>
+                <input type="password" id="RepeatPassword" name="RepeatPassword" placeholder="Repeat Password" required>
+            </div>
+
+            </div>
+                <button type="submit" class="SignUpButton">SignUp</button>
+            </div>
+    
+            <div class="container signin">
+                <p>Already have an account? <a href="{{url_for('SignIn')}}">Sign In</a>.</p>
+            </div>
+        </form>
+    </div>
+</div>
+
 {%endblock%}

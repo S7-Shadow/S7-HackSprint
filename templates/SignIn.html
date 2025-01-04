@@ -7,4 +7,38 @@
 
 {%block content%}
 
+<div>
+    <div>
+        <h1>Sign In</h1>
+    </div>
+
+    <div>
+        <form action="">
+
+            <div>
+                <label for="Email"><b>Email</b></label>
+                <input type="text" id="Email" name="Email" placeholder="Enter Email" required>
+            </div>
+    
+            <div>
+                <label for="Password"><b>Password</b></label>
+                <input type="password" id="Password" name="Password" placeholder="Enter Password" required>
+            </div>
+    
+            <div>
+                    <input type="checkbox" id="RememberMe" name="RememberMe">
+                    <label for="RememberMe">Remember me</label>
+            </div>
+
+            </div>
+                <button type="submit" class="SignIpButton">SignIn</button>
+            </div>
+    
+            <div class="SignIn">
+                <p>Don't have an account? <a href="{{url_for('SignUp')}}">SignUp</a>.</p>
+            </div>
+        </form>
+    </div>
+</div>
+
 {%endblock%}
