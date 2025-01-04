@@ -12,66 +12,10 @@
 
 <!-- The content of the Create Report Page -->
 {%block content%}
-{##}
-{#<h1>Create Report</h1>#}
-{##}
-{#<form action="">#}
-{##}
-{#    <div>#}
-{#        <label for="ReportTitle">Title</label>#}
-{#        <input type="text" id="ReportTitle" name="ReportTitle" placeholder="Title">#}
-{#    </div>#}
-{##}
-{#    <div>#}
-{#        <label for="ReportDescription">Description</label>#}
-{#        <input type="text" id="ReportDescription" name="ReportDescription" placeholder="Description">#}
-{#    </div>#}
-{##}
-{#    <div>#}
-{#        <label for="Thumbnail">Select a Thumbnail Image:</label>#}
-{#        <input type="file" id="Thumbnail" name="Thumbnail" accept="image/png, image/jpeg">#}
-{#    </div>#}
-{##}
-{#    <div>#}
-{#        <label for="ReportType">Type</label>#}
-{#        <select id="ReportType" name="ReportType">#}
-{#            <option value="Air Pollution">Air Pollution</option>#}
-{#            <option value="Water Pollution">Water Pollution</option>#}
-{#            <option value="Land Pollution">Land Pollution</option>#}
-{#            <option value="Noise Pollution">Noise Pollution</option>#}
-{#        </select>#}
-{#    </div>#}
-{##}
-{#    <div>#}
-{#        <label for="DataTime">Date and Time:</label>#}
-{#        <input type="datetime-local" id="DateTime" name="DateTime">#}
-{#    </div>#}
-{##}
-{#    <div>#}
-{#        <label for="ReportLocation">Location</label>#}
-{#        <input type="text" id="ReportLocation" name="ReportLocation" placeholder="Location">#}
-{#    </div>#}
-{##}
-{#    <div>#}
-{#        <label for="Attachments">Additional Attachments:</label>#}
-{#        <input type="file" id="Attachments" name="Attachments" accept="image/png, image/jpeg, video/mp4">#}
-{#    </div>#}
-{##}
-{#    <div>#}
-{#        <input type="checkbox" id="Declaration" name="Declaration" required>#}
-{#        <label for="Declaration">I hearby agree that all the information provided in this Report is genuine and true to my knowledge.</label>#}
-{#    </div>#}
-{##}
-{#    <div>#}
-{#        <input type="reset" value="Clear Form">#}
-{#        <input type="submit" value="Create Report">#}
-{#    </div>#}
-{##}
-{#</form>#}
 
 <div class="form-container">
     <h1>Create Report</h1>
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="/Report/CreateReport/" method="POST" enctype="multipart/form-data">
 
         <div>
             <label for="ReportTitle">Title</label>

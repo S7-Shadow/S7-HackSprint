@@ -7,4 +7,35 @@
 
 {%block content%}
 
+{% if Users | length < 1 %}
+    <h3>No Users found!</h3>
+
+{% else %}
+    {% for user in Users %}
+        <div class="Container">
+            Id: {{user.Id}}<br>
+            Name: {{user.Name}}<br>
+            Email: {{user.Email}}<br>
+            Password: {{user.Password}}
+        </div>
+    {% endfor %}
+{% endif %}
+
+{% if Reports | length < 1 %}
+    <h3>No Reports found!</h3>
+
+{% else %}
+    {% for report in Reports %}
+        <div class="Container">
+            Id: {{report.Id}}<br>
+            Title: {{report.Title}}<br>
+            Description: {{report.Description}}<br>
+            Type: {{report.Type}}<br>
+            DateTime: {{report.DateTime}}<br>
+            Location: {{report.Location}}<br>
+            PostedBy: {{report.PostedBy}}
+        </div>
+    {% endfor %}
+{% endif %}
+
 {%endblock%}
