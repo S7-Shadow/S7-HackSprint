@@ -20,21 +20,22 @@ body {
     background: #1c1c1c;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 h1 {
     text-align: center;
     font-size: 24px;
     color: #00FF96;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 /* Input Fields */
 input[type="text"], input[type="email"], input[type="password"] {
-    width: 90%;
+    width: 91%;
     padding: 12px 15px;
     margin: 10px 0;
+    margin-bottom: 20px;
     border: 1px solid #444;
     border-radius: 5px;
     background: #2b2b2b;
@@ -52,7 +53,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .SignUpButton {
     width: 100%;
     padding: 12px;
-    margin-top: 15px;
+    margin-top: 40px;
     background-color: #00FF96;
     color: #1c1c1c;
     font-weight: bold;
