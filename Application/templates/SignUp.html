@@ -13,6 +13,11 @@
     <h1>Sign Up</h1>
     <form action="/SignUp/" method="POST" id="signUpForm">
         <div>
+            <label for="UserName"><b>UserName</b></label>
+            <input type="text" id="UserName" name="UserName" placeholder="Enter UserName" required aria-label="UserName">
+        </div>
+
+        <div>
             <label for="Name"><b>Name</b></label>
             <input type="text" id="Name" name="Name" placeholder="Enter Name" required aria-label="Name">
         </div>
@@ -32,7 +37,7 @@
             <input type="password" id="RepeatPassword" name="RepeatPassword" placeholder="Repeat Password" required aria-label="Repeat Password">
         </div>
 
-        <div id="errorMessage">Passwords do not match!</div>
+{#        <div id="errorMessage">{{ error }}</div>#}
 
         <button type="submit" class="SignUpButton">Sign Up</button>
     </form>
@@ -40,20 +45,5 @@
         <p>Already have an account? <a href="{{url_for('SignIn')}}">Sign In</a>.</p>
     </div>
 </div>
-
-<script>
-    document.getElementById('signUpForm').addEventListener('submit', function(event) {
-        const password = document.getElementById('Password').value;
-        const repeatPassword = document.getElementById('RepeatPassword').value;
-        const errorMessage = document.getElementById('errorMessage');
-
-        if (password !== repeatPassword) {
-            event.preventDefault();
-            errorMessage.style.display = 'block';
-        } else {
-            errorMessage.style.display = 'none';
-        }
-    });
-</script>
 
 {%endblock%}

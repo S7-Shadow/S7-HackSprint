@@ -1,25 +1,15 @@
 {%extends "base.html" %}
 
+
 {%block head%}
 <link rel= "stylesheet" href="{{url_for('static', filename='ViewReport.css')}}">
 <title>View Report - EAN</title>
 {%endblock%}
 
+
 {%block content%}
 
-{% if Users | length < 1 %}
-    <h3>No Users found!</h3>
-
-{% else %}
-    {% for user in Users %}
-        <div class="Container">
-            Id: {{user.Id}}<br>
-            Name: {{user.Name}}<br>
-            Email: {{user.Email}}<br>
-            Password: {{user.Password}}
-        </div>
-    {% endfor %}
-{% endif %}
+UserName: {{ ActiveUser }}
 
 {% if Reports | length < 1 %}
     <h3>No Reports found!</h3>

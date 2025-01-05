@@ -1,7 +1,7 @@
 {%extends "Base.html" %}
 
 
-<!-- The head of the Create Report Page -->
+<!-- The head of the Reports/Create Page -->
 {%block head%}
 
 <link rel= "stylesheet" href="{{url_for('static', filename='CreateReport.css')}}">
@@ -10,12 +10,12 @@
 {%endblock%}
 
 
-<!-- The content of the Create Report Page -->
+<!-- The content of the Reports/Create Page -->
 {%block content%}
 
 <div class="form-container">
     <h1>Create Report</h1>
-    <form action="/Report/CreateReport/" method="POST" enctype="multipart/form-data">
+    <form action="/Reports/CreateReport/" method="POST" enctype="multipart/form-data">
 
         <div>
             <label for="ReportTitle">Title</label>

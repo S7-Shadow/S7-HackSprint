@@ -1,0 +1,41 @@
+{%extends "base.html" %}
+
+
+{%block head%}
+<link rel= "stylesheet" href="{{url_for('static', filename='Reports.css')}}">
+<title>Reports - EAN</title>
+{%endblock%}
+
+
+{%block content%}
+
+<div class="container">
+
+    {% if Reports | length < 1 %}
+    <div>
+        <h1>No Reports Found</h1>
+    </div>
+
+    {% else %}
+        {% for report in Reports %}
+            <div class="Card Report">
+                <img src="{{url_for('static', filename='Images/Report.png')}}" alt="Report Image" class="ReportImage">
+                <div>
+                    <h2>{{report.Title}}</h2>
+                    <h4>{{report.Type}}</h4>
+                    <h4>{{report.DateTime}}</h4>
+                    <h4>{{report.Location}}</h4>
+                    <h4>{{report.PostedBy}}</h4>
+                </div>
+                
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+</div>
+
+<div class="container Section">
+    
+</div>
+
+{%endblock%}

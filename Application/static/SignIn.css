@@ -30,7 +30,7 @@ h1 {
 }
 
 /* Input Fields */
-input[type="email"], input[type="password"] {
+input[type="text"], input[type="password"] {
     width: 92%;
     padding: 12px 15px;
     margin: 10px 0;
@@ -42,7 +42,7 @@ input[type="email"], input[type="password"] {
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-input[type="email"]:focus, input[type="password"]:focus {
+input[type="text"]:focus, input[type="password"]:focus {
     border-color: #00FF96;
     background-color: #333;
 }
