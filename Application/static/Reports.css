@@ -65,7 +65,7 @@ body {
     margin: 30px;
     margin-left: 200px;
     padding: 40px 40px;
-    border-radius: 3px;
+    border-radius: 15px;
     color: teal;
     background-color: #0e0d0d;
     text-decoration: none;
@@ -74,4 +74,14 @@ body {
 .Section {
     max-width: 500px;
     width: 100%;
+}
+
+.Section a {
+    padding: 40px 198px;
+    border-radius: 15px;
+    color: teal;
+    background-color: #0e0d0d;
+    text-decoration: none;
+    position: relative;
+    top: 5%;
 }

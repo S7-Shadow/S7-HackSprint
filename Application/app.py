@@ -150,3 +150,14 @@ def ViewReport():
     global ActiveUser
 
     return render_template("ViewReport.html", Reports=Reports)
+
+@app.route('/KnowledgeHub/', methods=['GET', 'POST'])
+def KnowledgeHub():
+    pass
+
+@app.route('/KnowledgeHub/Add', methods=['GET', 'POST'])
+def AddInformation():
+    pass
+
+
+
