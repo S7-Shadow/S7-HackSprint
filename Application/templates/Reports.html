@@ -22,11 +22,12 @@
                 <img src="{{url_for('static', filename='Images/Report.png')}}" alt="Report Image" class="ReportImage">
                 <div>
                     <h2>{{report.Title}}</h2>
-                    <h4>{{report.Type}}</h4>
-                    <h4>{{report.DateTime}}</h4>
-                    <h4>{{report.Location}}</h4>
-                    <h4>{{report.PostedBy}}</h4>
+                    <h4>Type: {{report.Type}}</h4>
+                    <h4>Date-Time: {{report.DateTime}}</h4>
+                    <h4>Location: {{report.Location}}</h4>
+                    <h4>Posted by: {{report.PostedBy}}</h4>
                 </div>
+                <a href="{{url_for('CreateReport')}}" class="button">View Report</a>
                 
             </div>
         {% endfor %}

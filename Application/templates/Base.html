@@ -12,10 +12,25 @@
 </head>
 
 <body>
-    <!-- Header - NavBar -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h4>EAN</h4>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="{{url_for('Home')}}">Home</a></li>
+                <li><a href="{{url_for('Reports')}}">Reports</a></li>
+                <li><a href="{{url_for('CreateReport')}}">Create Report</a></li>
+                <li><a href="{{url_for('SignIn')}}">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
     {% block content %}
     {% endblock %}
-    <!-- Footer - Support/Contact Links, Copyrights, Made-By section-->
+
 </body>
 
 </html>

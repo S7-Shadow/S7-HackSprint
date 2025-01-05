@@ -1,13 +1,16 @@
-{%extends "base.html" %}
+<!DOCTYPE html>
 
 
-{%block head%}
-<link rel= "stylesheet" href="{{url_for('static', filename='SignIn.css')}}">
-<title>SignIn - EAN</title>
-{%endblock%}
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href="{{url_for('static', filename='SignIn.css')}}">
+    <title>SignIn - EAN</title>
+</head>
 
-{%block content%}
+<body>
 
 <div class="form-container">
     <h1>Sign In</h1>
@@ -29,4 +32,6 @@
     </div>
 </div>
 
-{%endblock%}
+</body>
+
+</html>

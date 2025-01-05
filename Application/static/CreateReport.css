@@ -11,9 +11,10 @@ body {
 }
 
 /* Container to center the form */
-.container {
-    background-color: #fff;
+.form-container {
+    background-color: burlywood;
     padding: 20px;
+    border-radius: 8px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -35,7 +36,7 @@ form {
 
 /* Input fields */
 input[type="text"], input[type="datetime-local"], input[type="file"], select, textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin: 8px 0;
     border: 1px solid #ddd;
@@ -62,7 +63,7 @@ input[type="submit"], input[type="reset"] {
     margin-top: 20px;
     border: none;
     border-radius: 4px;
-    background-color: #4CAF50;
+    background-color: #3867b3;
     color: white;
     font-size: 16px;
     cursor: pointer;

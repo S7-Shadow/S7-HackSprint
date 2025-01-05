@@ -33,7 +33,7 @@ body {
     max-width: 1140px;
     width: 100%;
     padding: 20px 20px;
-    background: hsl(273, 46%, 18%);
+    background: hsl(0, 1%, 14%);
     border-radius: 10px;
     margin: 10px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -49,7 +49,26 @@ body {
 
 .Card div {
     margin-left: 20px;
-    color: #64c514;
+    color: #ffffff;
+}
+
+.Card div h2{
+    margin-bottom: 5px;
+}
+
+.Card div h4{
+    margin: 0;
+}
+
+.button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+    margin-left: 200px;
+    padding: 40px 40px;
+    border-radius: 3px;
+    color: teal;
+    background-color: #0e0d0d;
+    text-decoration: none;
 }
 
 .Section {
