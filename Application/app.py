@@ -1,12 +1,15 @@
+# --- Imports --- #
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 
+# --- App Initialization --- #
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Database.db'
 Database = SQLAlchemy(app)
 
 
+# --- Database Models --- #
 class User(Database.Model):
     UserName = Database.Column(Database.String(200), primary_key=True)
     Name = Database.Column(Database.String(200), nullable=False)
@@ -38,12 +41,16 @@ class KnowledgeHub(Database.Model):
         return f"<KnowledgeHub {self.Id}>"
 
 
+# --- Creating Database Instance --- #
 with app.app_context():
     Database.create_all()
 
 
+# --- Variable --- #
 global ActiveUser
 
+
+# --- Routes --- #
 @app.route('/')
 def Index():
     return render_template("Index.html")
