@@ -6,11 +6,113 @@
 
 <link rel= "stylesheet" href="{{url_for('static', filename='Home.css')}}">
 <title>Home-EAN</title>
+<!-- <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+    header {
+        background: #007BFF;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+        color: #007BFF;
+    }
+    ul {
+        padding-left: 1.5rem;
+    }
+    .team-info, .footer {
+        background: #f4f4f4;
+        padding: 1rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+    }
+    a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style> -->
 
 {%endblock%}
 
 
 <!-- The content of the Home Page -->
 {%block content%}
+
+<body>
+    <div class="container">
+        <section>
+            <h3>About Project</h3>
+            <p>The Environmental Action Network (EAN) is a web application platform for users to report environmental issues and collaborate on solutions. It can be regarded as a social media platform dedicated to environmental concerns.</p>
+            <ul>
+                <li>Community-driven crowdsourcing for environmental issues</li>
+                <li>Social media for environmentalists</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Why is EAN Needed?</h3>
+            <ul>
+                <li>Spreading awareness and encouraging action</li>
+                <li>Building connections between like-minded individuals</li>
+                <li>Quick delivery of effective solutions</li>
+                <li>Creating a knowledge hub for environmentalists</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Theme Alignment</h3>
+            <p><strong>Theme:</strong> Tech for Social Good</p>
+            <p>EAN aligns with the hackathon theme by leveraging technology to make the world a better place and fostering a greener, more sustainable planet.</p>
+        </section>
+
+        <section>
+            <h3>How EAN Works</h3>
+            <p>EAN uses a five-step process:</p>
+            <ol>
+                <li>Reporting and displaying issues through user-submitted reports.</li>
+                <li>Map visualization for better analysis of environmental reports.</li>
+                <li>Community forums for discussion and collaborative solutions.</li>
+                <li>Advanced analytics for deeper insights (if time permits).</li>
+                <li>AI consultation for enhanced problem-solving (optional).</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Additional Features (Optional)</h3>
+            <ul>
+                <li>Volunteer management system</li>
+                <li>Advanced analytics with geographical and environmental insights</li>
+                <li>AI chatbot integration for consultations</li>
+            </ul>
+        </section>
+
+        <section class="team-info">
+            <h3>Team and Members</h3>
+            <p><strong>Team Name:</strong> S7</p>
+            <p><strong>Member Count:</strong> 1</p>
+            <p><strong>Member:</strong> Aditya Kumar Chaurasia</p>
+            <p><strong>Email:</strong> <a href="mailto:24f2004741@ds.study.iitm.ac.in">24f2004741@ds.study.iitm.ac.in</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/S7-Shadow" target="_blank">S7-Shadow</a></p>
+        </section>
+    </div>
+</body>
 
 {%endblock%}

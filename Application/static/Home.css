@@ -1,5 +1,37 @@
-*{
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 1rem auto;
+    max-height: 1150px;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+    color: #007BFF;
+}
+ul {
+    padding-left: 1.5rem;
+}
+.team-info, .footer {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
