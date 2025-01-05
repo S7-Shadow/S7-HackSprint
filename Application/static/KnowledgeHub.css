@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    max-height: 1000px;
+    height: 100%;
+    margin: 10px;
+    padding: 20px 25px;
+    background: #1c1c1c;
+    border-radius: 10px;
+}
+
+.container h1 {
+    color: #64c514;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.Card {
+    max-width: 1140px;
+    width: 100%;
+    padding: 20px 20px;
+    background: hsl(0, 1%, 14%);
+    border-radius: 10px;
+    margin: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:inline-flex;
+}
+
+.Card img {
+    width: 15%;
+    height: 15%;
+    border-radius: 10px;
+
+}
+
+.Card div {
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.Card div h2{
+    margin-bottom: 5px;
+}
+
+.Card div h4{
+    margin: 0;
+}
+
+.button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+    margin-left: 500px;
+    padding: 40px 40px;
+    border-radius: 15px;
+    color: teal;
+    background-color: #0e0d0d;
+    text-decoration: none;
+}
+
+.Section {
+    max-width: 500px;
+    width: 100%;
+}
+
+.Section a {
+    padding: 40px 198px;
+    border-radius: 15px;
+    color: teal;
+    background-color: #0e0d0d;
+    text-decoration: none;
+    position: relative;
+    top: 5%;
+}

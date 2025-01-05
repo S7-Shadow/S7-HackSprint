@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%extends "base.html" %}
 
-</body>
-</html>
+
+{%block head%}
+<link rel= "stylesheet" href="{{url_for('static', filename='Reports.css')}}">
+<title>Reports - EAN</title>
+{%endblock%}
+
+
+{%block content%}
+
+<div class="container">
+
+    {% if Info | length < 1 %}
+    <div>
+        <h1>No info Available</h1>
+    </div>
+
+    {% else %}
+        {% for Information in Info %}
+            <div class="Card Report">
+                <div>
+                    <h2>{{Information.Title}}</h2>
+                    <h4>Description: {{Information.Description}}</h4>
+                </div>
+                <a href="{{url_for('AddInfo')}}" class="button">View Info</a>
+                
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+</div>
+
+<div class="container Section">
+    <a href="{{url_for('AddInfo')}}">Add Info</a>
+</div>
+
+{%endblock%}

@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%extends "Base.html" %}
 
-</body>
-</html>
+
+<!-- The head of the Reports/Create Page -->
+{%block head%}
+
+<link rel= "stylesheet" href="{{url_for('static', filename='AddInfo.css')}}">
+<title>Add Info - EAN</title>
+
+{%endblock%}
+
+
+<!-- The content of the Reports/Create Page -->
+{%block content%}
+
+<div class="form-container">
+    <h1>Add Info</h1>
+    <form action="/KnowledgeHub/AddInfo/" method="POST" enctype="multipart/form-data">
+
+        <div>
+            <label for="Title">Title</label>
+            <input type="text" id="Title" name="Title" placeholder="Title" required>
+        </div>
+
+        <div>
+            <label for="Description">Description</label>
+            <input type="text" id="Description" name="Description" placeholder="Description" required>
+        </div>
+
+        <div>
+            <label for="Content">Content</label>
+            <textarea id="Content" name="Content" placeholder="Content" required></textarea>
+        </div>
+
+        <div>
+            <input type="checkbox" id="Declaration" name="Declaration" required>
+            <label for="Declaration">I hereby agree that all the information provided in this Form is genuine and true to my knowledge.</label>
+        </div>
+
+        <div>
+            <input type="reset" value="Clear Form">
+            <input type="submit" value="Add Info">
+        </div>
+    </form>
+</div>
+
+{%endblock%}

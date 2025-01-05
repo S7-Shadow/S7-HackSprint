@@ -31,7 +31,7 @@ class Report(Database.Model):
     def __repr__(self):
         return f"<User {self.Id}>"
 
-class KnowledgeHub(Database.Model):
+class Knowledgehub(Database.Model):
     Id = Database.Column(Database.Integer, primary_key=True)
     Title = Database.Column(Database.String(200), nullable=False)
     Description = Database.Column(Database.String(1000), nullable=False)
@@ -153,11 +153,30 @@ def ViewReport():
 
 @app.route('/KnowledgeHub/', methods=['GET', 'POST'])
 def KnowledgeHub():
-    pass
 
-@app.route('/KnowledgeHub/Add', methods=['GET', 'POST'])
-def AddInformation():
-    pass
+    Info = Knowledgehub.query.order_by(Knowledgehub.Id).all()
+    return render_template("KnowledgeHub.html", Info=Info)
 
+@app.route('/KnowledgeHub/AddInfo/', methods=['GET', 'POST'])
+def AddInfo():
+
+    if request.method == 'POST':
+        Title = request.form['Title']
+        Description = request.form['Description']
+        Content = request.form['Content']
+
+        Data = Knowledgehub(Title=Title, Description=Description, Content=Content)
+
+        try:
+            Database.session.add(Data)
+            Database.session.commit()
+            return redirect('/KnowledgeHub/')
+
+        except Exception as e:
+            print(f"Error: {e}")
+            return render_template('AddInfo.html', error="Error")
+
+    else:
+        return render_template("AddInfo.html")
 
 
